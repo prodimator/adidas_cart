@@ -26,7 +26,7 @@ export default class ShoppingPage extends Component {
                 >
                     {shoppingItems.map((item) => {
                         return (
-                            <div className="card-container">
+                            <div className="card-container" key={item.id}>
                                 <ItemCard
                                     id={item.id}
                                     itemName={item.name}

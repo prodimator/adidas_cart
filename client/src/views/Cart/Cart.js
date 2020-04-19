@@ -6,6 +6,8 @@ import CartItem from '../../components/CartItem/CartItem';
 import OrderSummary from '../../components/OrderSummary/OrderSummary';
 import Button from '../../components/Button/Button';
 import { withCookies } from 'react-cookie';
+import axios from 'axios';
+
 import './Cart.scss';
 
 
@@ -29,13 +31,32 @@ class Cart extends Component {
         super(props);
         this.state = {
             isOpen: false,
-            cartItems: []
+            cartItems: [],
+            basketId: null,
         }
     }
 
     componentDidMount() {
         const { cookies } = this.props;
-        cookies.set('name', 'hello', { path: '/' });
+
+        // check to see if there is an existing bag to be used
+        if (!cookies.get('bag')) {
+            // axios.post(`https://www.adidas.com/api/checkout/baskets`, {
+            //     withCredentials: true,
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     }
+            // })
+            //     .then(res => {
+            //         console.log(res);
+            //     })
+            //     .catch(error => {
+            //         console.log(error)
+            //     });
+        }
+
+        console.log(cookies.get('bag'));
+        //cookies.set('bag', 'hello', { path: '/' });
     }
 
     togglePanel = () => {
@@ -73,10 +94,10 @@ class Cart extends Component {
                     variants={panel}
                 >
                     <Flexbox className="cart-content m-md" flexDirection="column">
-                        <h1 className="m-0">Cart</h1>
+                        <h1 className="m-0">Bag</h1>
                         {cartItems.length === 0 &&
                             <div className="my-md">
-                                <h3 className="my-sm">Your cart is empty</h3>
+                                <h3 className="my-sm">Your bag is empty</h3>
                                 <p className="my-sm">Once you add something to your bag, it will appear here. Ready to get started?</p>
                                 <div onClick={this.togglePanel}>
                                     <Button buttonText={'get started'} />
