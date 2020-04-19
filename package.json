@@ -2,7 +2,7 @@
   "name": "adidas_cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://prodimator.github.io/adidas-cart",
+  "homepage": "https://prodimator.github.io/adidas_cart",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

@@ -19,11 +19,11 @@ export default class ProductDetails extends Component {
         }
     }
     componentDidMount() {
-        // const { id } = this.props;
-        // axios.get(`https://www.adidas.com/api/products/EG4958/availability?callback=foo`)
-        //     .then(res => {
-        //         console.log(res);
-        //     })
+        const { id } = this.props;
+        axios.get(`https://www.adidas.com/api/products/EG4958/availability?callback=foo`)
+            .then(res => {
+                console.log(res);
+            })
         this.parseResponse();
 
     }

@@ -37,7 +37,6 @@ class Cart extends Component {
     componentDidMount() {
         const { cookies } = this.props;
         cookies.set('name', 'hello', { path: '/' });
-        console.log(cookies.get('name'));
     }
 
     togglePanel = () => {
