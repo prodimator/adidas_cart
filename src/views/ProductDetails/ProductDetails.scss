@@ -1,0 +1,16 @@
+@import '../../styles/globals.scss';
+@import '../../styles/colors.scss';
+
+
+.product-image{
+    height:300px;
+    width: 300px;
+}
+
+.select-size-dropdown{
+    width: 200px;
+}
+
+.error{
+    color: $red;
+}

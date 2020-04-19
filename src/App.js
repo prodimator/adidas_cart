@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Flexbox from 'flexbox-react';
+import ShoppingPage from './views/ShoppingPage/ShoppingPage';
+import NavMenu from './components/NavMenu/NavMenu';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flexbox className="App"
+      flexDirection="column"
+    >
+      <NavMenu />
+      <Flexbox justifyContent="center">
+        <ShoppingPage />
+      </Flexbox>
+    </Flexbox>
   );
 }
 
 export default App;
+

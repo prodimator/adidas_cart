@@ -1,0 +1,13 @@
+@import '../../styles/globals.scss';
+@import '../../styles/colors.scss';
+
+.button-container{
+    background: $black;
+
+    .button{
+        color: $white;
+        height: 48px;
+        text-transform: uppercase;
+    }
+}
+

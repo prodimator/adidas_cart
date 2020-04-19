@@ -1,0 +1,212 @@
+@import '../styles/colors.scss';
+
+
+
+input{
+    background: $white;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+
+    ::placeholder{
+        color: $gray-text;
+    }
+}
+
+$xxsm: 2px;
+$xsm: 10px;
+$sm: 13px;
+$md: 18px;
+$lg: 24px;
+$xlg: 36px;
+
+$laptop: 1366px;
+$tablet: 1024px;
+$mobile: 414px;
+
+$normal: 400;
+$bold: 600;
+
+.font-weight--bold{
+    font-weight: $bold;
+}
+
+.font-size--xsm{
+    font-size: $xsm;
+}
+.font-size--sm{
+    font-size: $sm;
+}
+.font-size--md{
+    font-size: $md;
+}
+.font-size--lg{
+    font-size: $lg;
+}
+
+.dropdown-label{
+    font-size: $sm;
+    font-weight: $bold;
+}
+
+.ui.selection.dropdown{
+  font-size: $xsm;
+}
+.ui.selection.active.dropdown{
+    border-color: $secondary !important;
+}
+.ui.selection.dropdown:focus {
+    border-color: $secondary !important;
+}
+.ui.selection.active.dropdown .menu{
+    border-color: $secondary !important;
+}
+.ui.dropdown .menu>.item{
+    font-size: $xsm !important;
+}
+
+.flex{
+    display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.align-vertical{
+    display: flex;
+    align-items: center;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+.align-left{
+    align-items: flex-start;
+}
+
+.align-right{
+    align-items: flex-end;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.p-0{
+    padding: 0;
+}
+.p-sm{
+    padding: 6px;
+}
+.p-smd{
+    padding: 14px;
+}
+.p-md{
+    padding: 20px;
+}
+.p-lg{
+    padding: 50px;
+}
+
+.px-sm{
+    padding: 0 6px;
+}
+.px-md{
+    padding: 0 20px;
+}
+.px-lg{
+    padding: 0 50px;
+}
+
+.pr-sm{
+    padding-right: 6px;
+}
+.pr-md{
+    padding-right: 20px;
+}
+.pr-lg{
+    padding-right: 50px;
+}
+
+.pl-sm{
+    padding-left: 6px;
+}
+.pl-md{
+    padding-left: 20px;
+}
+.pl-lg{
+    padding-left: 50px;
+}
+
+.pt-sm{
+    padding-top: 6px;
+}
+.pt-md{
+    padding-top: 20px;
+}
+.pt-lg{
+    padding-top: 50px;
+}
+
+.pb-sm{
+    padding-bottom: 6px;
+}
+.pb-md{
+    padding-bottom: 20px;
+}
+.pb-lg{
+    padding-bottom: 50px;
+}
+
+.py-sm{
+    padding: 6px 0;
+}
+.py-md{
+    padding: 20px 0;
+}
+.py-lg{
+    padding: 50px 0;
+}
+
+.m-0{
+    margin: 0;
+}
+.m-sm{
+    margin: 6px;
+}
+.m-md{
+    margin: 20px;
+}
+.m-lg{
+    margin: 50px;
+}
+
+.mx-sm{
+    margin: 0 6px;
+}
+.mx-md{
+    margin: 0 20px;
+}
+.mx-lg{
+    margin: 0 50px;
+}
+
+.my-sm{
+    margin: 6px 0;
+}
+.my-md{
+    margin: 20px 0;
+}
+.my-lg{
+    margin: 50px 0;
+}
+
+.shadow{
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+}

@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { CookiesProvider } from 'react-cookie';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <CookiesProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </CookiesProvider>,
   document.getElementById('root')
 );
 

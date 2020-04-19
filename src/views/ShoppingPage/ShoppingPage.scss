@@ -1,0 +1,12 @@
+@import '../../styles/globals.scss';
+@import '../../styles/colors.scss';
+
+.shopping-page-container{
+    max-width: $laptop;
+    width: 100%;
+    
+    .card-container{
+        margin-left: $xxsm;
+        margin-right: $xxsm;
+    }
+}

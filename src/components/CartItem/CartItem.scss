@@ -1,0 +1,13 @@
+@import '../../styles/globals.scss';
+@import '../../styles/colors.scss';
+
+.cart-item-container{
+
+    .item-image{
+        background: $gray-1;
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        margin-right: $xsm;
+    }
+}

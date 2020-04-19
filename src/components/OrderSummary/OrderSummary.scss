@@ -1,0 +1,10 @@
+@import '../../styles/globals.scss';
+@import '../../styles/colors.scss';
+
+
+.order-summary-container{
+    position: absolute;
+    bottom: 80px;
+    width: calc(100% - 40px);
+
+}
