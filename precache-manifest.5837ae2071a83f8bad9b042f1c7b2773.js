@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "14918d25631091e52f5ecf2f73fefb83",
+    "revision": "61d9a99ed1ab0e9f580d6d6336319733",
     "url": "/adidas_cart/index.html"
   },
   {
-    "revision": "7a1cb96aac06f2649a87",
+    "revision": "24318094f42caebaf27c",
     "url": "/adidas_cart/static/css/2.e94017bf.chunk.css"
   },
   {
-    "revision": "1d962876b13318c69d4c",
-    "url": "/adidas_cart/static/css/main.8a225959.chunk.css"
+    "revision": "a04907e857e1ce70dced",
+    "url": "/adidas_cart/static/css/main.c7b15b8c.chunk.css"
   },
   {
-    "revision": "7a1cb96aac06f2649a87",
-    "url": "/adidas_cart/static/js/2.319a306a.chunk.js"
+    "revision": "24318094f42caebaf27c",
+    "url": "/adidas_cart/static/js/2.c6c6d317.chunk.js"
   },
   {
     "revision": "7919130a4cf3aff0f4075975f626da52",
-    "url": "/adidas_cart/static/js/2.319a306a.chunk.js.LICENSE.txt"
+    "url": "/adidas_cart/static/js/2.c6c6d317.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1d962876b13318c69d4c",
-    "url": "/adidas_cart/static/js/main.0a3f38ec.chunk.js"
+    "revision": "a04907e857e1ce70dced",
+    "url": "/adidas_cart/static/js/main.d0a4a336.chunk.js"
   },
   {
     "revision": "289201c3a5fc957c3b46",
     "url": "/adidas_cart/static/js/runtime-main.14008030.js"
   },
   {
-    "revision": "167f535e2327fef1d7336982d8458021",
-    "url": "/adidas_cart/static/media/arrow.167f535e.svg"
+    "revision": "609c4f2ae8cd0bed456147441e0090c0",
+    "url": "/adidas_cart/static/media/arrow.609c4f2a.svg"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -52,8 +52,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/adidas_cart/static/media/brand-icons.e8c322de.woff2"
   },
   {
-    "revision": "f987d4e1000147da9121a0391f66771b",
-    "url": "/adidas_cart/static/media/cross.f987d4e1.svg"
+    "revision": "dd65b4e78a7509fb24d648643e44944c",
+    "url": "/adidas_cart/static/media/cross.dd65b4e7.svg"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
@@ -80,8 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/adidas_cart/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "798ff6834556e20e0d0307fc4ff24c36",
-    "url": "/adidas_cart/static/media/menu.798ff683.svg"
+    "revision": "88170f8af6b6ce33d92a379915412d3b",
+    "url": "/adidas_cart/static/media/menu.88170f8a.svg"
   },
   {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
