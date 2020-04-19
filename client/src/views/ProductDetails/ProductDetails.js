@@ -74,12 +74,20 @@ export default class ProductDetails extends Component {
 
     addToBag = () => {
         const { selected, quantity } = this.state;
+        const { addToBag, bag, itemName, itemPrice, imgSrc } = this.props;
 
         if (!selected || !quantity) {
             this.setState({ error: true })
         }
         else {
-            console.log(`adding ${this.state.selected.sku} to bad with a quantity of ${this.state.quantity}`)
+            const bagItem = {
+                sku: selected.sku,
+                quantity,
+                itemName,
+                itemPrice,
+                imgSrc,
+            }
+            addToBag(bagItem);
         }
     }
 

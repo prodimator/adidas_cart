@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Flexbox from 'flexbox-react';
 import Button from '../../components/Button/Button';
-import ProductDetails from '../../views/ProductDetails/ProductDetails';
+import ProductDetails from '../../views/ProductDetails';
 import Modal from '../Modal/Modal';
+import { formatToCurrency } from '../../utils/formatter';
 import './ItemCard.scss';
 
 export default class ItemCard extends Component {
@@ -35,7 +36,7 @@ export default class ItemCard extends Component {
                         justifyContent="space-between"
                     >
                         <p className="item-title m-0">{itemName}</p>
-                        <p className="item-price m-0">{formatter.format(itemPrice)}</p>
+                        <p className="item-price m-0">{formatToCurrency.format(itemPrice)}</p>
                     </Flexbox>
                     <div onClick={this.selectItem}>
                         <Button buttonText="select item" />
@@ -55,8 +56,3 @@ export default class ItemCard extends Component {
         )
     }
 }
-
-var formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-});

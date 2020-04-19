@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ReactComponent as Menu } from '../../assets/svg/menu.svg';
 import { motion } from "framer-motion";
 import Flexbox from 'flexbox-react';
-import CartItem from '../../components/CartItem/CartItem';
+import CartItem from '../../components/CartItem';
 import OrderSummary from '../../components/OrderSummary/OrderSummary';
 import Button from '../../components/Button/Button';
 import { withCookies } from 'react-cookie';
@@ -55,7 +55,7 @@ class Cart extends Component {
             //     });
         }
 
-        console.log(cookies.get('bag'));
+        //.log(cookies.get('bag'));
         //cookies.set('bag', 'hello', { path: '/' });
     }
 
@@ -69,6 +69,7 @@ class Cart extends Component {
 
     render() {
         const { isOpen, cartItems } = this.state;
+        const { bag } = this.props;
 
         return (
             <React.Fragment>
@@ -95,7 +96,7 @@ class Cart extends Component {
                 >
                     <Flexbox className="cart-content m-md" flexDirection="column">
                         <h1 className="m-0">Bag</h1>
-                        {cartItems.length === 0 &&
+                        {bag.length === 0 &&
                             <div className="my-md">
                                 <h3 className="my-sm">Your bag is empty</h3>
                                 <p className="my-sm">Once you add something to your bag, it will appear here. Ready to get started?</p>
@@ -105,8 +106,10 @@ class Cart extends Component {
                             </div>
                         }
                         {
-                            cartItems.map(item => (
-                                <CartItem />
+                            bag.map(item => (
+                                <div key={item.id}>
+                                    <CartItem sku={item.sku} />
+                                </div>
                             ))
                         }
                         <OrderSummary />

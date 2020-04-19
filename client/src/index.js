@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import 'semantic-ui-css/semantic.min.css';
+import { Provider } from 'react-redux'
+import store from './js/store'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { CookiesProvider } from 'react-cookie';
+
+import './index.scss';
+import 'semantic-ui-css/semantic.min.css';
 
 
 ReactDOM.render(
   <CookiesProvider>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </CookiesProvider>,
   document.getElementById('root')

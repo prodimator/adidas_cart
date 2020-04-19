@@ -3,11 +3,21 @@
 
 .cart-item-container{
 
-    .item-image{
+    .item-image-small{
         background: $gray-1;
         width: 70px;
         height: 70px;
         border-radius: 50px;
         margin-right: $xsm;
+    }
+
+    .increment{
+        cursor: pointer;
+    }
+
+    .remove{
+        color: $red;
+        text-decoration: underline;
+        cursor: pointer;
     }
 }

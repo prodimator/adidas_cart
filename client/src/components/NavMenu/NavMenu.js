@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Flexbox from 'flexbox-react';
-import Cart from '../../views/Cart/Cart';
+import Cart from '../../views/Cart';
 
 import './NavMenu.scss';
 
