@@ -24,4 +24,8 @@ jobs:
           npm run build
 
       - name: Deploy to GH Pages
-        run: npm run deploy
+        run: |
+          git config --global user.email "rwolfe22@gmail.com"
+          git config --global user.name "Ryan Wolfe"
+          git remote set-url origin https://github.com/prodimator/adidas_cart.git
+          npm run deploy
