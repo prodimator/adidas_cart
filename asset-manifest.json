@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/adidas-cart/static/css/main.8a225959.chunk.css",
-    "main.js": "/adidas-cart/static/js/main.07a1d3ec.chunk.js",
-    "main.js.map": "/adidas-cart/static/js/main.07a1d3ec.chunk.js.map",
-    "runtime-main.js": "/adidas-cart/static/js/runtime-main.3f14aa4e.js",
-    "runtime-main.js.map": "/adidas-cart/static/js/runtime-main.3f14aa4e.js.map",
-    "static/css/2.d5d0a1e1.chunk.css": "/adidas-cart/static/css/2.d5d0a1e1.chunk.css",
-    "static/js/2.319a306a.chunk.js": "/adidas-cart/static/js/2.319a306a.chunk.js",
-    "static/js/2.319a306a.chunk.js.map": "/adidas-cart/static/js/2.319a306a.chunk.js.map",
-    "index.html": "/adidas-cart/index.html",
-    "precache-manifest.2b5c2c3d88ffa0c3b4924299fcc4c7d3.js": "/adidas-cart/precache-manifest.2b5c2c3d88ffa0c3b4924299fcc4c7d3.js",
-    "service-worker.js": "/adidas-cart/service-worker.js",
-    "static/css/2.d5d0a1e1.chunk.css.map": "/adidas-cart/static/css/2.d5d0a1e1.chunk.css.map",
-    "static/css/main.8a225959.chunk.css.map": "/adidas-cart/static/css/main.8a225959.chunk.css.map",
-    "static/js/2.319a306a.chunk.js.LICENSE.txt": "/adidas-cart/static/js/2.319a306a.chunk.js.LICENSE.txt",
-    "static/media/arrow.167f535e.svg": "/adidas-cart/static/media/arrow.167f535e.svg",
-    "static/media/semantic.min.css": "/adidas-cart/static/media/outline-icons.ef60a4f6.woff",
-    "static/media/cross.f987d4e1.svg": "/adidas-cart/static/media/cross.f987d4e1.svg",
-    "static/media/menu.798ff683.svg": "/adidas-cart/static/media/menu.798ff683.svg"
+    "main.css": "/adidas_cart/static/css/main.8a225959.chunk.css",
+    "main.js": "/adidas_cart/static/js/main.0a3f38ec.chunk.js",
+    "main.js.map": "/adidas_cart/static/js/main.0a3f38ec.chunk.js.map",
+    "runtime-main.js": "/adidas_cart/static/js/runtime-main.14008030.js",
+    "runtime-main.js.map": "/adidas_cart/static/js/runtime-main.14008030.js.map",
+    "static/css/2.e94017bf.chunk.css": "/adidas_cart/static/css/2.e94017bf.chunk.css",
+    "static/js/2.319a306a.chunk.js": "/adidas_cart/static/js/2.319a306a.chunk.js",
+    "static/js/2.319a306a.chunk.js.map": "/adidas_cart/static/js/2.319a306a.chunk.js.map",
+    "index.html": "/adidas_cart/index.html",
+    "precache-manifest.950dd3633c62cd8f49ce3125072d31f1.js": "/adidas_cart/precache-manifest.950dd3633c62cd8f49ce3125072d31f1.js",
+    "service-worker.js": "/adidas_cart/service-worker.js",
+    "static/css/2.e94017bf.chunk.css.map": "/adidas_cart/static/css/2.e94017bf.chunk.css.map",
+    "static/css/main.8a225959.chunk.css.map": "/adidas_cart/static/css/main.8a225959.chunk.css.map",
+    "static/js/2.319a306a.chunk.js.LICENSE.txt": "/adidas_cart/static/js/2.319a306a.chunk.js.LICENSE.txt",
+    "static/media/arrow.167f535e.svg": "/adidas_cart/static/media/arrow.167f535e.svg",
+    "static/media/semantic.min.css": "/adidas_cart/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/cross.f987d4e1.svg": "/adidas_cart/static/media/cross.f987d4e1.svg",
+    "static/media/menu.798ff683.svg": "/adidas_cart/static/media/menu.798ff683.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3f14aa4e.js",
-    "static/css/2.d5d0a1e1.chunk.css",
+    "static/js/runtime-main.14008030.js",
+    "static/css/2.e94017bf.chunk.css",
     "static/js/2.319a306a.chunk.js",
     "static/css/main.8a225959.chunk.css",
-    "static/js/main.07a1d3ec.chunk.js"
+    "static/js/main.0a3f38ec.chunk.js"
   ]
 }
