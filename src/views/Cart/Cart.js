@@ -5,8 +5,7 @@ import Flexbox from 'flexbox-react';
 import CartItem from '../../components/CartItem/CartItem';
 import OrderSummary from '../../components/OrderSummary/OrderSummary';
 import Button from '../../components/Button/Button';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
+import { withCookies } from 'react-cookie';
 import './Cart.scss';
 
 
@@ -49,8 +48,6 @@ class Cart extends Component {
 
     render() {
         const { isOpen, cartItems } = this.state;
-
-        const { cookies } = this.props;
 
         return (
             <React.Fragment>

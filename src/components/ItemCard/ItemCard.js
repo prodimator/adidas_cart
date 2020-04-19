@@ -30,7 +30,7 @@ export default class ItemCard extends Component {
                     justifyContent="center"
                     flexDirection="column"
                 >
-                    <img src={imgSrc} className="card-image" />
+                    <img src={imgSrc} className="card-image" alt="item" />
                     <Flexbox className="item-info p-smd font-weight--bold font-size--sm"
                         justifyContent="space-between"
                     >

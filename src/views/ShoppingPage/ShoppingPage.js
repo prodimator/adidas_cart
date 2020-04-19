@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Flexbox from 'flexbox-react';
 import ItemCard from '../../components/ItemCard/ItemCard';
 import response from '../../utils/mockAPIData.json';
-import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
-
 
 import './ShoppingPage.scss';
 

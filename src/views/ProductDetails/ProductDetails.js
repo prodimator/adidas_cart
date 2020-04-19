@@ -19,8 +19,7 @@ export default class ProductDetails extends Component {
         }
     }
     componentDidMount() {
-        const { id } = this.props;
-        axios.get(`https://www.adidas.com/api/products/EG4958/availability?callback=foo`)
+        axios.get(`https://www.adidas.com/api/products/EG4958/availability?`)
             .then(res => {
                 console.log(res);
             })
@@ -41,6 +40,7 @@ export default class ProductDetails extends Component {
                 }
                 options.push(newOption);
             }
+            return options;
         });
 
         this.setState({ options });
@@ -90,7 +90,7 @@ export default class ProductDetails extends Component {
                     <Flexbox flexDirection="column"
                         justifyContent="center"
                     >
-                        <img className="product-image" src={imgSrc} />
+                        <img className="product-image" src={imgSrc} alt="item" />
                         <Flexbox justifyContent="space-between" className="my-sm" style={{ width: '100%' }}>
                             <Dropdown
                                 className="select-size-dropdown"
