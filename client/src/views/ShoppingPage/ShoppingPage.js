@@ -16,6 +16,8 @@ export default class ShoppingPage extends Component {
     render() {
         const { shoppingItems } = this.state;
 
+        console.log("shopping page");
+
         return (
             <Flexbox className="shopping-page-container p-lg my-lg"
                 flexDirection="column"
