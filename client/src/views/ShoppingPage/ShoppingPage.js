@@ -3,6 +3,7 @@ import Flexbox from 'flexbox-react';
 import axios from 'axios';
 import ItemCard from '../../components/ItemCard/ItemCard';
 import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
+import response from '../../utils/mockAPIData.json';
 
 import './ShoppingPage.scss';
 
@@ -17,15 +18,21 @@ export default class ShoppingPage extends Component {
     }
 
     componentDidMount() {
-        let data = [];
-        products.map(product => {
-            axios.get(`/api/products/${product}`)
-                .then(res => {
-                    data.push(res.data);
-                    this.setState({ shoppingItems: data })
-                });
-            return data
-        })
+
+        // ideally, if I didn't get 403's, I could get the shopping page items this way.
+
+        //let data = [];
+        // products.map(product => {
+        //     axios.get(`/api/products/${product}`)
+        //         .then(res => {
+        //             data.push(res.data);
+        //             this.setState({ shoppingItems: data })
+        //         });
+        //     return data
+        // })
+
+        // so we use mock data instead... :(
+        this.setState({ shoppingItems: response.data });
     }
 
     render() {
