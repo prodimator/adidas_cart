@@ -22,31 +22,34 @@ export default class CartItem extends Component {
     addQuantity = () => {
         const { bagItem } = this.state;
 
+        const quantity = bagItem.quantity + 1;
+
+        this.props.updateQuantity(bagItem, quantity);
         this.setState({
             bagItem: {
                 ...bagItem,
-                quantity: this.state.bagItem.quantity + 1
+                quantity
             }
-        }, () => {
-            this.props.updateQuantity(bagItem, bagItem.quantity);
         });
     }
 
     reduceQuantity = () => {
         const { bagItem } = this.state;
 
-        if (bagItem.quantity === 1) {
+        const quantity = bagItem.quantity - 1;
+
+        if (quantity === 0) {
             this.props.removeFromBag(bagItem);
         }
 
-        if (bagItem.quantity > 0) {
+        if (quantity > 0) {
+            this.props.updateQuantity(bagItem, quantity);
+
             this.setState({
                 bagItem: {
                     ...bagItem,
-                    quantity: this.state.bagItem.quantity - 1
+                    quantity
                 }
-            }, () => {
-                this.props.updateQuantity(bagItem, bagItem.quantity);
             });
         }
     }

@@ -52,9 +52,6 @@ class Cart extends Component {
             //         console.log(error)
             //     });
         }
-
-        //.log(cookies.get('bag'));
-        //cookies.set('bag', 'hello', { path: '/' });
     }
 
     togglePanel = () => {
