@@ -14,7 +14,7 @@ app.use('/api', createProxyMiddleware({
     changeOrigin: true,
     //secure: false,
     onProxyRes: function (proxyRes, req, res) {
-        proxyRes.headers['Access-Control-Allow-Origin'] = '*';
+        proxyRes.headers['Access-Control-Allow-Origin'] = 'https://www.adidas.com';
         proxyRes.headers['Access-Control-Allow-Methods'] = ['GET', 'POST', 'OPTIONS'];
         proxyRes.headers['Access-Control-Allow-Credentials'] = 'true';
         proxyRes.headers['Access-Control-Allow-Headers'] = ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'];
