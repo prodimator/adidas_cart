@@ -2,6 +2,12 @@
 
 This is a simplified implementation of the shopping and checkout workflow for the Adidas shopping experience.
 
+## Notes
+
+I ran into a couple of complications working with the Product and Basket APIs. Locally, the Product API works fine. I set up a proxy server in order to get past any CORS issues. As far as the Basket API goes, I could never hit any of the endpoints while using the app. It always returns a 403. I was even unsuccessful using the Swagger documentation and using Postman was finnicky (sometimes it would work and sometimes it would return a 403). I spent way too much time trying to figure that issue out and I would love to hear your thoughts on getting around that! Since the Basket API implementation is missing, the UI has a couple of workarounds in order to make the UX of the shopping experience work.
+
+I also ran into more 403 errors when the app is running in the deployed environment. The Product API will now return a 403 whenever I try to hit it, and just as before, the Basket API will return a 403 as well. I'm all out of ideas on that 403 issue...
+
 ## How to use
 
 ### Installation and running the app locally
