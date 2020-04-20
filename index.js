@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname, '/client/build')));
 app.use('/api', createProxyMiddleware({
     target: 'https://www.adidas.com',
     changeOrigin: true,
-    //secure: false,
     onProxyRes: function (proxyRes, req, res) {
         proxyRes.headers['Access-Control-Allow-Origin'] = 'https://www.adidas.com';
         proxyRes.headers['Access-Control-Allow-Methods'] = ['GET', 'POST', 'OPTIONS'];
@@ -27,6 +26,8 @@ app.get('*', (req, res) => {
 
 
 const port = process.env.PORT || 5000;
+console.log(port);
+console.log(process.env);
 app.listen(port);
 
 // const express = require('express');
