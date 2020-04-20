@@ -1,10 +1,12 @@
 import {
-    UPDATE_BAG
+    UPDATE_BAG,
+    TOGGLE_ORDER_OVERVIEW
 } from "../constants/action-types";
 
 
 const initialState = {
     bag: [],
+    showOrderOverview: false,
 };
 
 function rootReducer(state = initialState, action) {
@@ -19,6 +21,12 @@ function rootReducer(state = initialState, action) {
                 bag: action.payload.bag
             });
         }
+    }
+
+    if (action.type === TOGGLE_ORDER_OVERVIEW) {
+        return Object.assign({}, state, {
+            showOrderOverview: action.payload.showOrderOverview
+        });
     }
     return state;
 

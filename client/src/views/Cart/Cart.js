@@ -3,10 +3,9 @@ import { ReactComponent as Menu } from '../../assets/svg/menu.svg';
 import { motion } from "framer-motion";
 import Flexbox from 'flexbox-react';
 import CartItem from '../../components/CartItem';
-import OrderSummary from '../../components/OrderSummary/OrderSummary';
+import OrderSummary from '../../components/OrderSummary';
 import Button from '../../components/Button/Button';
 import { withCookies } from 'react-cookie';
-import axios from 'axios';
 
 import './Cart.scss';
 
@@ -31,7 +30,6 @@ class Cart extends Component {
         super(props);
         this.state = {
             isOpen: false,
-            cartItems: [],
             basketId: null,
         }
     }
@@ -68,8 +66,8 @@ class Cart extends Component {
     }
 
     render() {
-        const { isOpen, cartItems } = this.state;
-        const { bag } = this.props;
+        const { isOpen } = this.state;
+        const { bag, showOrderOverview, toggleOrderOverview } = this.props;
 
         return (
             <React.Fragment>
@@ -94,26 +92,38 @@ class Cart extends Component {
                     transition={{ duration: .5 }}
                     variants={panel}
                 >
-                    <Flexbox className="cart-content m-md" flexDirection="column">
-                        <h1 className="m-0">Bag</h1>
-                        {bag.length === 0 &&
-                            <div className="my-md">
-                                <h3 className="my-sm">Your bag is empty</h3>
-                                <p className="my-sm">Once you add something to your bag, it will appear here. Ready to get started?</p>
-                                <div onClick={this.togglePanel}>
-                                    <Button buttonText={'get started'} />
+                    {!showOrderOverview &&
+                        <Flexbox className="cart-content m-md" flexDirection="column">
+                            <h1 className="m-0">Bag</h1>
+                            {bag.length === 0 &&
+                                <div className="my-md">
+                                    <h3 className="my-sm">Your bag is empty</h3>
+                                    <p className="my-sm">Once you add something to your bag, it will appear here. Ready to get started?</p>
+                                    <div onClick={this.togglePanel}>
+                                        <Button buttonText={'get started'} />
+                                    </div>
                                 </div>
-                            </div>
-                        }
-                        {
-                            bag.map(item => (
-                                <div key={item.id}>
-                                    <CartItem sku={item.sku} />
+                            }
+                            {
+                                bag.map(item => (
+                                    <div key={item.sku}>
+                                        <CartItem sku={item.sku} />
+                                    </div>
+                                ))
+                            }
+                            {bag.length > 0 &&
+                                <div onClick={() => toggleOrderOverview({ showOrderOverview: true })}>
+                                    <Button buttonText={'show order overview'} />
                                 </div>
-                            ))
-                        }
-                        <OrderSummary />
-                    </Flexbox>
+                            }
+                            {/* <OrderSummary /> */}
+                        </Flexbox>
+                    }
+                    {showOrderOverview &&
+                        <Flexbox className="cart-content m-md" flexDirection="column">
+                            <OrderSummary />
+                        </Flexbox>
+                    }
                 </motion.div>
             </React.Fragment>
         )

@@ -1,2 +1,3 @@
 export const UPDATE_BAG = "UPDATE_BAG";
+export const TOGGLE_ORDER_OVERVIEW = 'TOGGLE_ORDER_OVERVIEW';
 

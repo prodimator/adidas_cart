@@ -1,9 +1,14 @@
 import {
-    UPDATE_BAG
+    UPDATE_BAG,
+    TOGGLE_ORDER_OVERVIEW
 } from "../constants/action-types";
 
 export function updateBag(payload) {
     return { type: UPDATE_BAG, payload }
+};
+
+export function toggleOrderOverview(payload) {
+    return { type: TOGGLE_ORDER_OVERVIEW, payload }
 };
 
 export function addToBag(bagItem) {
@@ -15,7 +20,8 @@ export function addToBag(bagItem) {
         if (alreadyInBag) {
             bag.map(item => {
                 if (item.sku === bagItem.sku) {
-                    item.quantity += bagItem.quantity
+                    item.quantity += bagItem.quantity;
+                    return item;
                 }
             });
             dispatch(updateBag({ bag }));
@@ -29,14 +35,15 @@ export function addToBag(bagItem) {
 
 export function removeFromBag(bagItem) {
     return (dispatch, getState) => {
-        const bag = [...getState().bag];
-        const updatedBag = bag.filter(item => item.sku !== bagItem.sku);
-        dispatch(updateBag({ updatedBag }));
+        console.log(bagItem);
+        const oldBag = [...getState().bag];
+        const bag = oldBag.filter(item => item.sku !== bagItem.sku);
+        console.log(bag);
+        dispatch(updateBag({ bag }));
     }
 }
 
 export function updateQuantity(bagItem, quantity) {
-    console.log("quantity ", quantity);
     return (dispatch, getState) => {
         const bag = [...getState().bag];
         bag.map(item => {

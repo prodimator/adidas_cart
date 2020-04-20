@@ -49,6 +49,7 @@ export default class ItemCard extends Component {
                             itemName={itemName}
                             imgSrc={imgSrc}
                             itemPrice={itemPrice}
+                            toggleDisplay={() => this.setState({ itemSelected: false })}
                         />
                     </Modal>
                 }

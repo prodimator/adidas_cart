@@ -3,8 +3,11 @@
 
 
 .order-summary-container{
-    position: absolute;
-    bottom: 80px;
-    width: calc(100% - 40px);
+
+    .back{
+        cursor: pointer;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
 
 }

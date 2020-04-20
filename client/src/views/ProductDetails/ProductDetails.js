@@ -23,7 +23,6 @@ export default class ProductDetails extends Component {
 
         axios.get(`/api/products/${id}/availability?`)
             .then(res => {
-                console.log(res);
                 this.parseResponse(res.data);
 
             })
@@ -74,7 +73,7 @@ export default class ProductDetails extends Component {
 
     addToBag = () => {
         const { selected, quantity } = this.state;
-        const { addToBag, bag, itemName, itemPrice, imgSrc } = this.props;
+        const { addToBag, itemName, itemPrice, imgSrc, toggleDisplay } = this.props;
 
         if (!selected || !quantity) {
             this.setState({ error: true })
@@ -88,7 +87,9 @@ export default class ProductDetails extends Component {
                 imgSrc,
             }
             addToBag(bagItem);
+            toggleDisplay();
         }
+
     }
 
     render() {
