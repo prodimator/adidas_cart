@@ -8,6 +8,8 @@ I ran into a couple of complications working with the Product and Basket APIs. L
 
 I also ran into more 403 errors when the app is running in the deployed environment. The Product API will now return a 403 whenever I try to hit it, and just as before, the Basket API will return a 403 as well. I'm all out of ideas on that 403 issue...
 
+All that said, run it locally for the best experience.
+
 ## How to use
 
 ### Installation and running the app locally
