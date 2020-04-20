@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require('cors');
+const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 
 app.use(cors());
@@ -9,13 +9,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 app.use(express.static(path.join(__dirname, '/client/build')));
 
-
-// app.use(express.static(path.join(__dirname, '../client/build')));
-
-
-// app.get('/*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
 
 app.use('/api', createProxyMiddleware({
     target: 'https://www.adidas.com',
