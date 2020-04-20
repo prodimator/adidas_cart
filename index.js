@@ -9,10 +9,6 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 app.use(express.static(path.join(__dirname, '/client/build')));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
-
 app.use('/api', createProxyMiddleware({
     target: 'https://www.adidas.com',
     changeOrigin: true,
@@ -24,6 +20,11 @@ app.use('/api', createProxyMiddleware({
         proxyRes.headers['Access-Control-Allow-Headers'] = ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'];
     }
 }));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
+0
 
 const port = process.env.PORT || 5000;
 app.listen(port);
