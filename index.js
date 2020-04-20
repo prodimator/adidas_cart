@@ -26,26 +26,4 @@ app.get('*', (req, res) => {
 
 
 const port = process.env.PORT || 5000;
-console.log(port);
-console.log(process.env);
 app.listen(port);
-
-// const express = require('express');
-// const proxy = require('http-proxy-middleware');
-
-// const app = express();
-// app.use(express.static('client'));
-
-// // Add middleware for http proxying 
-// const apiProxy = proxy('/api', { target: 'https://www.adidas.com' });
-// app.use('/api', apiProxy);
-
-// // Render your site
-// const renderIndex = (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client/public/index.html'));
-// }
-// app.get('/*', renderIndex);
-
-// app.listen(5000, () => {
-//     console.log('Listening on: http://localhost:5000');
-// });

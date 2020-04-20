@@ -35,10 +35,8 @@ export function addToBag(bagItem) {
 
 export function removeFromBag(bagItem) {
     return (dispatch, getState) => {
-        console.log(bagItem);
         const oldBag = [...getState().bag];
         const bag = oldBag.filter(item => item.sku !== bagItem.sku);
-        console.log(bag);
         dispatch(updateBag({ bag }));
     }
 }
